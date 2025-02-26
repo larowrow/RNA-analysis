@@ -50,7 +50,6 @@ dat_expr_1<-dat_expr_1 %>%
   dplyr::select(-rowMean)%>%     
   tibble::column_to_rownames(colnames(.)[1])   
 
-# pcg <- read.delim2('/data/nas3/luchensi/data/PCG(1).xls(v22)')
 pcg <- read.delim2('PCG(1).xls(v22)')
 dat_expr_1 <- dat_expr_1[rownames(dat_expr_1)%in%pcg$gene_name,] %>% na.omit()
 
